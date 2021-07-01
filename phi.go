@@ -21,7 +21,7 @@ func New(windowSize, minSamples int) *PhiDetector {
 	}
 }
 
-func (p *PhiDetector) Add(t time.Time) {
+func (p *PhiDetector) AddHeartbeat(t time.Time) {
 	p.lock.Lock()
 	defer p.lock.Unlock()
 
